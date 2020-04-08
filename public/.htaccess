@@ -1,0 +1,11 @@
+
+rewrite ^/uploads/(.*)$ /uploads/$1 last;
+rewrite ^/data/(.*)$ /data/$1 last;
+rewrite ^/static/(.*)$ /static/$1 last;
+rewrite ^/data/(.*)$ /data/$1 last;
+#隐藏index.php
+rewrite  ^/index.php/(.*)$  /index.php?s=$1 last;
+#隐藏index.php
+rewrite  ^(.*)$  /index.php?s=$1 last;
+
+break;
